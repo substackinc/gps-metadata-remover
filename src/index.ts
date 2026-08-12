@@ -10,7 +10,7 @@ const logLevel = import.meta.env.LOG_LEVEL as LogLevel;
 if (logLevel && LogLevel[logLevel]) { // Check if the provided log level is valid
   Logger.currentLevel = logLevel;
 } else {
-  Logger.currentLevel = LogLevel.Info; // Default to Info if not specified or invalid
+  Logger.currentLevel = LogLevel.Warn; // Default to Warn if not specified or invalid
 }
 
 const isVideo = (uri: string) => /(mp4|m4v|webm|mov)/i.test(uri)
