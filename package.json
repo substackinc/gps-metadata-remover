@@ -37,7 +37,6 @@
   },
   "scripts": {
     "build": "yarn typecheck && vite build",
-    "prepublish": "yarn run build",
     "test": "vitest run --disable-console-intercept",
     "typecheck": "yarn tsc -p tsconfig.json --noEmit",
     "test-multiple": "for i in {1..10}; do vitest run --disable-console-intercept || (echo 'Failed after $i attempts' && break); done",
